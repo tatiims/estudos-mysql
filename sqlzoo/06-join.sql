@@ -34,6 +34,25 @@ FROM
 WHERE
     population >= 200000000;
 
+-- Exercício 4 - População em Milhões (South America)
+-- Objetivo: Retornar o nome e a população em milhões para os países da América do Sul.
+-- Regra de negócio: Dividir a população por 1.000.000 para converter habitantes em milhões.
+--
+-- NOTA TÉCNICA (Analista de Dados):
+-- No MySQL e em outros bancos relacionais, podemos usar notação científica (1e6) 
+-- para representar 1.000.000 (1 milhão) e evitar erros ao digitar muitos zeros.
+-- Exemplo: 1e6 = 1x10^6 (1 milhão) | 1e9 = 1x10^9 (1 bilhão).
+-- *Nota de Plataforma:* O SQLZoo exige os zeros explícitos (1000000) para validar a resposta.
+-- ==============================================================================
+
+SELECT
+    name,
+    population / 1000000 AS population_millions
+FROM
+    world
+WHERE
+    continent = 'South America';
+
 
 
 
