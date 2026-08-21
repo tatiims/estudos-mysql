@@ -53,6 +53,26 @@ FROM
 WHERE
     continent = 'South America';
 
+-- ==============================================================================
+-- Exercício 5 - Países Específicos (France, Germany, Italy)
+-- Plataforma: SQLZoo (SELECT from World)
+--
+-- Objetivo: Retornar o nome e a população da França, Alemanha e Itália.
+--
+-- CONCEITO DE SQL (Filtros Eficientes):
+-- Em vez de utilizar múltiplos operadores 'OR' (ex: name = 'France' OR name = 'Germany'),
+-- utilizamos o operador 'IN (...)'. Ele verifica se o valor da coluna pertence a uma 
+-- lista de valores, tornando o código mais limpo, legível e performático.
+-- ==============================================================================
+
+SELECT 
+    name,
+    population
+FROM 
+    world
+WHERE 
+    name IN ('France', 'Germany', 'Italy');
+
 
 
 
